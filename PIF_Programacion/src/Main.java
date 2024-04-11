@@ -123,11 +123,9 @@ public class Main {
         // desde 0 en el for, pues se le añade una unidad más quedand 6+1=7
         for (byte i = 0; i<=(hora-7); i++){
             turno+=4;
-            if (i==(hora-7)){
-                for (byte x = 15; x<=minutos; x+=15){
+                for (byte x = 15; i==(hora-7) && x<=minutos; x+=15){
                     turno++;
                 }
-            }
         }
         return turno;
     }
